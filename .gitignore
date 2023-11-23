@@ -9,7 +9,7 @@ venv/
 env/
 
 # Robot Framework
-reports/
+results/
 
 # Ignore any local configuration files
 .robot/
