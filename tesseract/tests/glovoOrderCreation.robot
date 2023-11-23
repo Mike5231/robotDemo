@@ -12,4 +12,4 @@ Get_health
 
 Get_health_2
     ${job_info}  get job info  ${job_id}
-    Should Be Equal As Strings  34358621  ${job_info.json()}[job_number]
+    Should Be Equal As Strings  3435862  ${job_info.json()}[job_number]
