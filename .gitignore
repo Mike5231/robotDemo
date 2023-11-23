@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+env/
+
+# Robot Framework
+reports/
+
+# Ignore any local configuration files
+.robot/
+
+# Miscellaneous
+*.log
+*.swp
+.DS_Store
+
+#IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
