@@ -11,6 +11,3 @@ requests = "*"
 
 [requires]
 python_version = "3.8"
-
-[scripts]
-robot = "robot"
