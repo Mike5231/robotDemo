@@ -1,5 +1,6 @@
 *** Settings ***
 Library     ../libraries/jobs.py
+Library    ../data/jobsMock.py
 
 *** Variables ***
 ${job_id}       db195424-9088-4fd4-a9ba-1a4fc1053dcd
@@ -20,3 +21,9 @@ Get_job_2
     ${job_number}  Set Variable  ${response.data['job_number']}
     Should Be Equal As Numbers  200  ${status_code}
     Should Be Equal As Strings  3435862  ${job_number}
+
+Get_availability
+    ${availability}    create availability payload    currency_code=EUR
+    ${response}    get availability    ${availability}
+    ${status_code}  Set Variable  ${response.status_code}
+    Should Be Equal As Numbers  200  ${status_code}

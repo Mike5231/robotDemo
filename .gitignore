@@ -10,6 +10,9 @@ env/
 
 # Robot Framework
 results/
+report.html
+output.xml
+log.html
 
 # Ignore any local configuration files
 .robot/

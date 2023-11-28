@@ -20,8 +20,8 @@ class ResponseObject:
 
 def http_request(request_config):
     response = requests.request(
-        method=request_config['method'],
-        url=request_config['url'],
+        request_config['method'],
+        request_config['url'],
         headers=request_config.get('headers', {}),
         data=request_config.get('data'),
         params=request_config.get('params'),
