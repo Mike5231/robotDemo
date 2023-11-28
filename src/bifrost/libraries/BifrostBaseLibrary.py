@@ -1,11 +1,12 @@
 from src.utils.http import http_request
+import os
 
 
 class BifrostBase:
     def __init__(self):
-        self.base_url = "https://nebula.vormir.instaleap.io"
+        self.base_url = "https://api.vormir.instaleap.io"
         self.headers = {
-            'Authorization': 'Bearer'
+            'x-api-key': ''
         }
 
     def make_request(self, method, endpoint, data=None):
