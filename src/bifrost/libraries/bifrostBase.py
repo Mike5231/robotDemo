@@ -1,14 +1,20 @@
 import json
-
-from src.utils.http import http_request
 import os
+from dotenv import load_dotenv
+from src.utils.http import http_request
+
+load_dotenv()
+
+
+class BifrostEntities:
+    JOBS = 'jobs'
 
 
 class BifrostBase:
-    def __init__(self):
-        self.base_url = "https://api.vormir.instaleap.io"
+    def __init__(self, entity: BifrostEntities):
+        self.base_url = f"{os.getenv('BIFROST_URL')}/{entity}"
         self.headers = {
-            'x-api-key': '',
+            'x-api-key': os.getenv('BIFROST_API_KEY'),
             'Content-Type': 'application/json'
         }
 

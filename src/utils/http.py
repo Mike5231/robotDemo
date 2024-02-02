@@ -27,4 +27,9 @@ def http_request(request_config):
         params=request_config.get('params'),
         timeout=DEFAULT_REQUEST_TIMEOUT_IN_SECONDS,
     )
-    return ResponseObject(response.status_code, response.headers, response.json())
+    print(response)
+    print(response.json())
+    response_json = response.json()
+    response_text = response.text
+    response_object = ResponseObject(response.status_code, response.headers, response.json())
+    return response
