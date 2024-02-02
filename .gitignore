@@ -28,4 +28,3 @@ log.html
 *.iws
 *.ipr
 .vscode/
-./terraform
