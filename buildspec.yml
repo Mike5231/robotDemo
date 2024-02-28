@@ -6,13 +6,12 @@ phases:
       python: 3.8
     commands:
       - echo Building test for $PROJECT
-      - export PYTHONPATH=$CODEBUILD_SRC_DIR/src:$PYTHONPATH
       - pip install pipenv
       - pipenv install --dev
 
   build:
     commands:
-      - pipenv run robot --outputdir $PROJECT/results src/$PROJECT/tests/
+      - pipenv run python src/runner.py
 
 artifacts:
   files:
