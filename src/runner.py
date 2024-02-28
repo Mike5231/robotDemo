@@ -1,10 +1,5 @@
-import os
 import subprocess
 import sys
-
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
 def test_runner():
@@ -20,7 +15,7 @@ def test_runner():
         "output.xml",
         "--report",
         "report.html",
-        f"src/bifrost/tests",
+        "src/bifrost/tests",
     ]
     return subprocess.run(options)
 
